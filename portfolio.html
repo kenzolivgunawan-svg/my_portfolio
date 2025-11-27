@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kenzo Liv Gunawan - Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+<style>
+    :root {
+
+  --bg-main: #f5eee6;
+
+  --bg-soft: #fff8ef;
+
+  --bg-card: #ffffff;
+
+  --accent: #c28a55;
+
+  --accent-strong: #a5662a;
+
+  --text-main: #252525;
+
+  --text-soft: #727272;
+
+  --radius-lg: 20px;
+
+  --radius-md: 14px;
+
+  --shadow: 0 14px 34px rgba(15, 23, 42, 0.16);
+
+}
+
+/* RESET */
+
+* {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+body {
+
+  font-family: "Poppins", system-ui, sans-serif;
+
+  background:
+
+    radial-gradient(circle at 0% 0%, #fff8ef 0, transparent 56%),
+
+    radial-gradient(circle at 100% 100%, #f1decb 0, transparent 55%),
+
+    linear-gradient(180deg, #f8f1ea, #f4ece2);
+
+  color: var(--text-main);
+
+}
+
+/* NAVBAR */
+
+.navbar {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  padding: 12px 8%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: rgba(255, 250, 244, 0.9);
+
+  backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(222, 205, 185, 0.9);
+
+  z-index: 50;
+
+}
+
+.logo {
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  font-size: 16px;
+
+  color: var(--accent-strong);
+
+}
+
+.nav-links {
+
+  list-style: none;
+
+  display: flex;
+
+  gap: 18px;
+
+}
+
+.nav-links a {
+
+  font-size: 13px;
+
+  color: var(--text-soft);
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  transition: 0.2s;
+
+}
+
+.nav-links a:hover {
+
+  background: #f1e1d3;
+
+  color: var(--accent-strong);
+
+}
+
+/* HERO */
+
+.hero {
+
+  position: relative;
+
+  min-height: 90vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0 8%;
+
+  background-size: cover;
+
+  background-position: center center;
+
+  background-attachment: fixed;
+
+  color: white;
+
+}
+
+.hero-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(120deg, rgba(0,0,0,0.55), rgba(0,0,0,0.35));
+
+}
+
+.hero-content {
+
+  position: relative;
+
+  text-align: center;
+
+  max-width: 600px;
+
+  z-index: 2;
+
+}
+
+.hero-content h1 {
+
+  font-size: 42px;
+
+  letter-spacing: 0.05em;
+
+  margin-bottom: 10px;
+
+}
+
+.hero-content p {
+
+  font-size: 15px;
+
+  opacity: 0.9;
+
+  margin-bottom: 18px;
+
+}
+
+.hero-btn {
+
+  display: inline-block;
+
+  padding: 11px 22px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(120deg, #e3b78c, #c28a55);
+
+  color: #fffdf6;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  box-shadow: 0 12px 30px rgba(180, 120, 70, 0.6);
+
+}
+
+/* GENERIC SECTION */
+
+.section {
+
+  padding: 80px 9% 90px;
+
+  margin-top: 60px;
+
+}
+
+.section-title {
+
+  font-size: 26px;
+
+  margin-bottom: 8px;
+
+  color: var(--accent-strong);
+
+}
+
+.section-desc {
+
+  font-size: 14px;
+
+  color: var(--text-soft);
+
+  margin-bottom: 28px;
+
+}
+
+/* ABOUT */
+
+.about-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+
+}
+
+.about-card {
+
+  background: var(--bg-card);
+
+  border-radius: var(--radius-lg);
+
+  padding: 18px 18px 14px;
+
+  border: 1px solid rgba(220, 200, 180, 0.9);
+
+  box-shadow: var(--shadow);
+
+}
+
+.about-card h3 {
+
+  font-size: 16px;
+
+  margin-bottom: 8px;
+
+}
+
+.about-card ul {
+
+  list-style: disc;
+
+  margin-left: 18px;
+
+  font-size: 13px;
+
+  color: var(--text-soft);
+
+}
+
+.about-card li {
+
+  margin-bottom: 4px;
+
+}
+
+.subsection-title {
+
+  font-size: 18px;
+
+  margin-bottom: 14px;
+
+  margin-top: 10px;
+
+}
+
+/* SCHOOL CARDS */
+
+.school-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 18px;
+
+}
+
+.school-card {
+
+  background: var(--bg-card);
+
+  border-radius: var(--radius-lg);
+
+  overflow: hidden;
+
+  border: 1px solid rgba(220,200,180,0.9);
+
+  box-shadow: var(--shadow);
+
+}
+
+.school-card img {
+
+  width: 100%;
+
+  height: 160px;
+
+  object-fit: cover;
+
+}
+
+.school-info {
+
+  padding: 12px 14px 14px;
+
+}
+
+.school-info h4 {
+
+  font-size: 15px;
+
+  margin-bottom: 4px;
+
+}
+
+.school-info p {
+
+  font-size: 13px;
+
+  color: var(--text-soft);
+
+}
+
+/* CARD GRID (ACADEMIC / NON-ACADEMIC / CERTS) */
+
+.card-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+  gap: 18px;
+
+}
+
+.card {
+
+  background: var(--bg-card);
+
+  border-radius: var(--radius-lg);
+
+  padding: 16px 16px 14px;
+
+  border: 1px solid rgba(220,200,180,0.9);
+
+  box-shadow: var(--shadow);
+
+}
+
+.card img {
+
+  width: 100%;
+
+  border-radius: var(--radius-md);
+
+  margin-bottom: 8px;
+
+  object-fit: cover;
+
+}
+
+.card h3 {
+
+  font-size: 15px;
+
+  margin-bottom: 6px;
+
+}
+
+.card p {
+
+  font-size: 13px;
+
+  color: var(--text-soft);
+
+}
+
+/* CONTACT */
+
+.contact-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 20px;
+
+}
+
+.contact-card {
+
+  background: var(--bg-card);
+
+  border-radius: var(--radius-lg);
+
+  padding: 18px 18px 16px;
+
+  border: 1px solid rgba(220,200,180,0.9);
+
+  box-shadow: var(--shadow);
+
+}
+
+.contact-card h3 {
+
+  font-size: 16px;
+
+  margin-bottom: 10px;
+
+}
+
+.contact-card ul {
+
+  list-style: none;
+
+  font-size: 13px;
+
+  color: var(--text-soft);
+
+}
+
+.contact-card li {
+
+  margin-bottom: 4px;
+
+}
+
+.contact-form {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+}
+
+.contact-form input,
+
+.contact-form textarea {
+
+  border-radius: 12px;
+
+  border: 1px solid #dccbb8;
+
+  padding: 9px 11px;
+
+  font-size: 13px;
+
+  font-family: inherit;
+
+  resize: vertical;
+
+}
+
+.contact-form textarea {
+
+  min-height: 100px;
+
+}
+
+.contact-form button {
+
+  margin-top: 4px;
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  border: none;
+
+  background: linear-gradient(120deg, #e3b78c, #c28a55);
+
+  color: #fffdf6;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+}
+
+/* FOOTER */
+
+.footer {
+
+  text-align: center;
+
+  padding: 18px 0 22px;
+
+  font-size: 12px;
+
+  color: var(--text-soft);
+
+  border-top: 1px solid #e2d0be;
+
+  background: #f8f0e7;
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .navbar {
+
+    padding-inline: 5%;
+
+  }
+
+  .nav-links {
+
+    gap: 10px;
+
+    font-size: 12px;
+
+  }
+
+  .hero {
+
+    background-attachment: scroll;
+
+  }
+
+  .hero-content h1 {
+
+    font-size: 32px;
+
+  }
+
+  .section {
+
+    padding-inline: 6%;
+
+  }
+
+}
+ 
+</style>
+</head>
+<body>
+<!-- NAVBAR -->
+<header class="navbar">
+<div class="logo">KENZO</div>
+<nav>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Me</a></li>
+<li><a href="#academic">Academic</a></li>
+<li><a href="#nonacademic">Non-Academic</a></li>
+<li><a href="#certificates">Certificates</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<!-- HERO / HOME -->
+<!-- GANTI IMG_7612.jpeg DENGAN NAMA FILE FOTO SUNGLASSES-MU -->
+<section id="home" class="hero" style="background-image: url('images/IMG_7612.jpeg');">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>Kenzo Liv Gunawan</h1>
+<p>Innovation · Discipline · Growth</p>
+<a href="#about" class="hero-btn">Explore My Portfolio</a>
+</div>
+</section>
+<!-- ABOUT ME -->
+<section id="about" class="section">
+<h2 class="section-title">About Me</h2>
+<p class="section-desc">
+     A driven individual with strong interest in engineering, physics, and continuous self–development.
+</p>
+<!-- ABOUT: TOP GRID -->
+<div class="about-grid">
+<div class="about-card">
+<h3>Personal Details</h3>
+<ul>
+<li><strong>Name:</strong> Kenzo Liv Gunawan</li>
+<li><strong>Career Interest:</strong> Mining Engineering</li>
+</ul>
+</div>
+<div class="about-card">
+<h3>Strengths</h3>
+<ul>
+<li>Quick and adaptive learner</li>
+<li>Strong analytical and logical thinking</li>
+<li>Creative problem solver</li>
+<li>Disciplined and consistent in routines</li>
+<li>Curious and eager to explore new concepts</li>
+</ul>
+</div>
+<div class="about-card">
+<h3>Weaknesses</h3>
+<ul>
+<li>Sometimes overthinking details</li>
+<li>Hesitant to delegate tasks</li>
+<li>Can be too focused on one problem for too long</li>
+</ul>
+</div>
+<div class="about-card">
+<h3>Core Skills</h3>
+<ul>
+<li>Mathematical reasoning</li>
+<li>Scientific research & experimentation</li>
+<li>Critical thinking</li>
+<li>Technical project planning</li>
+<li>Team collaboration</li>
+</ul>
+</div>
+</div>
+<!-- SCHOOL JOURNEY – SETIAP SEKOLAH TERPISAH -->
+<h3 class="subsection-title">Education Journey</h3>
+<div class="school-grid">
+<!-- GANTI NAMA FILE SESUAI FOTO SEKOLAH TRIDHARMA -->
+<div class="school-card">
+<img src="" alt="Sekolah Tridharma">
+<div class="school-info">
+<h4>Sekolah Tridharma</h4>
+<p>Grade 1–4 · Built foundational academic & character values.</p>
+</div>
+</div>
+<!-- GANTI NAMA FILE SESUAI FOTO SEKOLAH CITRA KASIH -->
+<div class="school-card">
+<img src="images/IMG_0188.jpg" alt="Sekolah Citra Kasih Manado">
+<div class="school-info">
+<h4>Sekolah Citra Kasih Manado</h4>
+<p>Grade 5–9 · Developed stronger logical, social, and leadership skills.</p>
+</div>
+</div>
+<!-- GANTI NAMA FILE SESUAI FOTO SDH HOLLAND VILLAGE -->
+<div class="school-card">
+<img src="images/IMG_0195.JPG" alt="Sekolah Dian Harapan Holland Village">
+<div class="school-info">
+<h4>Sekolah Dian Harapan Holland Village</h4>
+<p>Grade 10–12 · Deepened interest in physics, engineering, and future career direction.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ACADEMIC EXPERIENCE -->
+<section id="academic" class="section">
+<h2 class="section-title">Academic Experience</h2>
+<p class="section-desc">
+     Projects and competitions that strengthened my scientific, analytical, and presentation skills.
+</p>
+<div class="card-grid">
+<!-- SCIENCE FAIR -->
+<!-- GANTI DENGAN FOTO POSTER / PROYEK SCIENCE FAIR -->
+<article class="card">
+<img src="images/9b6fa5c3-d7d3-49d7-b080-f8a43aea0944.jpg" alt="Science Fair Project">
+<h3>Science Fair – Bicycle Generator</h3>
+<p>
+         Designed and built a bicycle generator that produces electricity using pedaling and airflow.
+         Explored efficiency between pedal power and turbine–based generation.
+</p>
+</article>
+<!-- OJK QUIZ -->
+<!-- GANTI DENGAN FOTO TIM OJK -->
+<article class="card">
+<img src="images/FAF67E08-4F03-4444-8ECF-B27F871F316D.jpeg" alt="OJK Competition">
+<h3>OJK Financial Quiz – 1st Place</h3>
+<p>
+         Led the team to 1st place in a financial literacy quiz competition, combining strategy,
+         communication, and quick calculation under pressure.
+</p>
+</article>
+<!-- UNSRAT PHYSICS -->
+<!-- GANTI DENGAN FOTO JUARA 2 UNSRAT -->
+<article class="card">
+<img src="images/5FE53DFE-7462-44D2-A0D9-8E018EB0C3FF.jpeg" alt="UNSRAT Modern Physics">
+<h3>UNSRAT Modern Physics – 2nd Place</h3>
+<p>
+         Competed in a modern physics competition, presenting ideas on sustainable technology and
+         its application in Indonesia.
+</p>
+</article>
+<!-- DRAMA P5 -->
+<!-- GANTI DENGAN FOTO DRAMA -->
+<article class="card">
+<img src="images/3D9B6991-7217-422C-A09B-C37C131974B8.jpeg" alt="Drama P5">
+<h3>Drama P5 – Indonesian Independence</h3>
+<p>
+         Played the role of a Japanese general in an independence–themed drama, learning teamwork,
+         expression, and stage discipline.
+</p>
+</article>
+<!-- KSR / MATH / SCIENCE EVENT -->
+<!-- GANTI DENGAN FOTO TWINBON / KSR -->
+<article class="card">
+<img src="images/8325FD77-27A1-4C59-BA55-C899F26000CA.jpeg" alt="KSR Participation">
+<h3>KSR Science & Math Activities</h3>
+<p>
+         Joined KSR competitions and activities to sharpen logical reasoning, conceptual understanding,
+         and competitive mindset.
+</p>
+</article>
+<!-- EXTRA ACADEMIC (CERTIFICATE / PODCAST / PROJECT) -->
+<article class="card">
+<img src="images/BBC204BB-4AF3-4378-A476-F26E2DEF03D4.jpeg" alt="Additional Academic Activity">
+<h3>Research & Presentation</h3>
+<p>
+         Involved in various research–based tasks, strengthening public speaking, writing,
+         and data interpretation skills.
+</p>
+</article>
+</div>
+</section>
+<!-- NON-ACADEMIC EXPERIENCE -->
+<section id="nonacademic" class="section">
+<h2 class="section-title">Non-Academic Experience</h2>
+<p class="section-desc">
+     Activities that shaped my discipline, physical endurance, creativity, and personal growth.
+</p>
+<div class="card-grid">
+<!-- ARM WRESTLING -->
+<article class="card">
+<img src="images/D9BF9FBA-1A20-454E-A1F5-BF5B3D262D3A.jpeg" alt="Arm Wrestling">
+<h3>Arm Wrestling Competition</h3>
+<p>
+         Participated in a regional arm wrestling competition, achieving a podium position in the -65kg category.
+</p>
+</article>
+<!-- RUNNING 10K -->
+<article class="card">
+<img src="images/6634d8ba-def1-42fd-888e-607241b546c9.jpg" alt="10K Running">
+<h3>10 km Running</h3>
+<p>
+         Completed a 10 km run within 56 minutes, improving endurance, discipline, and consistency in training.
+</p>
+</article>
+<!-- GYM -->
+<article class="card">
+<img src="images/4AA8692A-AEC3-4574-A298-C48CE7796BA8.jpeg" alt="Gym Training">
+<h3>Gym & Strength Training</h3>
+<p>
+         Trained consistently over months to build strength and physique, reinforcing self–discipline and patience.
+</p>
+</article>
+<!-- SWIMMING -->
+<article class="card">
+<img src="images/96E3558E-80AA-47BD-B451-7BCAC9C59CCD.jpeg" alt="Swimming">
+<h3>Swimming Practice</h3>
+<p>
+         Practiced swimming regularly and achieved a 40m / 25 second timing, focusing on speed and stamina.
+</p>
+</article>
+<!-- BAKING BROWNIES -->
+<article class="card">
+<img src="images/8A56C010-36AC-462A-BDCD-CB04EBBE82F0.jpeg" alt="Baking Brownies">
+<h3>Baking Brownies</h3>
+<p>
+         Baked homemade brownies and shared/sold them to peers and teachers as a simple entrepreneurship activity.
+</p>
+</article>
+<!-- NIGHT SKY PHOTOGRAPHY -->
+<article class="card">
+<img src="images/6634d8ba-def1-42fd-888e-607241b546c9.jpg" alt="Night sky photography">
+<h3>Photography – Night Sky</h3>
+<p>
+         Captured sky and nature scenes, especially night–time views, as a creative outlet and way to appreciate details.
+</p>
+</article>
+</div>
+</section>
+<!-- CERTIFICATES -->
+<section id="certificates" class="section">
+<h2 class="section-title">Certificates</h2>
+<p class="section-desc">
+     Recognition for achievements and active participation in competitions.
+</p>
+<div class="card-grid">
+<!-- CERT OJK -->
+<article class="card">
+<img src="images/241347FE-A1C1-4BE3-B37B-38DA9F0AE60E.jpeg" alt="OJK Certificate">
+<h3>OJK Financial Quiz – 1st Place</h3>
+<p>Official certificate for winning 1st place in a financial literacy competition.</p>
+</article>
+<!-- CERT UNSRAT -->
+<article class="card">
+<img src="images/38B8D2F9-9CEF-4587-B113-BA6E029306CD.jpeg" alt="UNSRAT Certificate">
+<h3>UNSRAT Modern Physics – 2nd Place</h3>
+<p>Certificate for achieving 2nd place in a modern physics competition.</p>
+</article>
+<!-- CERT KSR / OTHER -->
+<article class="card">
+<img src="images/B2390971-440A-4E99-9085-2A21E32E57FE.jpeg" alt="KSR Certificate">
+<h3>KSR / Science Competition Participation</h3>
+<p>Proof of active involvement in science/physics–related competition or training.</p>
+</article>
+</div>
+</section>
+<!-- CONTACT -->
+<section id="contact" class="section">
+<h2 class="section-title">Contact</h2>
+<p class="section-desc">
+     Feel free to reach out for collaboration, projects, or networking related to science, engineering, or competitions.
+</p>
+<div class="contact-grid">
+<div class="contact-card">
+<h3>Contact Information</h3>
+<ul>
+<li><strong>Email:</strong> kenzolivgunawan@gmail.com</li>
+<li><strong>Instagram:</strong> @kenzogunawann</li>
+<li><strong>WhatsApp:</strong> +62 853-2666-5154</li>
+</ul>
+</div>
+<div class="contact-card">
+<h3>Send a Message</h3>
+<form class="contact-form">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="footer">
+<p>© 2025 Kenzo Liv Gunawan · Personal Portfolio</p>
+</footer>
+<!-- SMOOTH SCROLL JS -->
+<script>
+   document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
+     link.addEventListener('click', e => {
+       e.preventDefault();
+       const target = document.querySelector(link.getAttribute('href'));
+       if (target) {
+         window.scrollTo({
+           top: target.offsetTop - 70,
+           behavior: 'smooth'
+         });
+       }
+     });
+   });
+</script>
+
+</body>
+</html>
